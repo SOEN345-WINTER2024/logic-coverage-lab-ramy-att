@@ -33,7 +33,7 @@ public class CheckItTest {
     @Test
     public void when_All_Clauses_Are_False_then_Output_Should_Be_False() {
         CheckIt.checkIt(false, false, false);
-        assertEquals("P is false", testOutputContent.toString().trim());
+        assertEquals("P isn't true", testOutputContent.toString().trim());
     }
 
     // PREDICATE COVERAGE
@@ -59,7 +59,7 @@ public class CheckItTest {
     @Test
     public void when_CACC_Fails_then_Output_Should_Be_False() {
         CheckIt.checkIt(false, true, false);
-        assertEquals("P is false", testOutputContent.toString().trim());
+        assertEquals("P isn't true", testOutputContent.toString().trim());
     }
 
     // RACC COVERAGE
@@ -72,6 +72,6 @@ public class CheckItTest {
     @Test
     public void when_RACC_Fails_then_Output_Should_Be_False() {
         CheckIt.checkIt(false, false, true);
-        assertEquals("P is false", testOutputContent.toString().trim());
+        assertEquals("P isn't true", testOutputContent.toString().trim());
     }
 }
